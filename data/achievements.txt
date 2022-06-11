@@ -1,0 +1,40 @@
+Best Friend
+dog(1)
+Buy the friend upgrade.
+false
+I'm so hungry!
+canned-food
+Hungry 100
+false
+Time to go to the Vet
+veterinary(1)
+Go 200 times to the Vet.
+false
+Very Best Friend.
+paws
+Invite your friend 200 times.
+false
+The Shop Is Empty!
+pet-shop
+Buy Every Upgrade.
+false
+I Like Food
+pet-food(1)
+Feed your dog 200 times
+false
+The Best Time Is Playing Time.
+bone
+Play 200 times with your dog.
+false
+Playing Champion
+balloon-dog
+Play 1000 times with your dog.
+false
+I Love You!
+dog
+Get 200 love points
+false
+Doggy Specialist
+medal
+Get all achievements.
+false

@@ -1,0 +1,50 @@
+Superbowl
+bowl
+Increase happiness (+ 2) and decrease weight (-0.1) when eating.
+2
+false
+A New Friend 
+paw
+You can invite your friend!
+4
+false
+Fancy Collar
+collar
+Decrease tiredness (-2) after walking.
+8
+false
+Perfect Ball
+toys
+Increases happiness(+2) when playing.
+16
+false
+Best Doggy Transporter
+transporter
+Increases happiness (+2) after going to the Veterinary.
+24
+false
+Fabulous Grooming Kit
+grooming
+Increases happiness (+2) and decreases tiredness (-2) after grooming.
+32
+false
+The Tickle Champion Medal
+footprint
+Increases happiness (+2) when being tickled.
+40
+false
+Nutritious Dog-Food
+pet-food
+Decreases weight (-0.1) and sick (-1).
+48
+false
+Loving Vet
+veterinary
+Increases happiness (+2) after going to the Veterinary.
+56
+false
+Cosy Bed
+animal
+Increases happiness (+3) after sleeping.
+64
+false

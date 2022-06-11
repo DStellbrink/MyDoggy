@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyDoggyFX.FXMLController">
+   <children>
+      <ImageView fx:id="imgBg2" fitHeight="416.0" fitWidth="673.0" layoutX="-51.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-9.882354736328125" AnchorPane.leftAnchor="-51.0" AnchorPane.rightAnchor="-22.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../../image/4127069.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBg1" fitHeight="80.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/bg1.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="menuView" layoutY="82.0" prefHeight="319.0" prefWidth="600.0" visible="false">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ListView fx:id="menu" prefHeight="319.0" prefWidth="300.0" GridPane.columnIndex="1" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label fx:id="lblMenuChoice" text="Make your choice">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label />
+                  <ImageView fx:id="imgMenu" fitHeight="67.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label />
+                  <TextArea fx:id="menuInformation" editable="false" prefHeight="60.0" prefWidth="300.0" wrapText="true" />
+                  <Label fx:id="lblMenuCost" text="Costs: -" />
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="300.0" spacing="40.0">
+                     <children>
+                        <Button fx:id="btnMenuChoice" mnemonicParsing="false" text="Choose" />
+                        <Button fx:id="btnCloseMenu" mnemonicParsing="false" text="Close Menu" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gridMenu" layoutX="-1.0" layoutY="5.0" prefHeight="80.0" prefWidth="600.0" style="-fx-border-width: 2; -fx-border-color: Black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="0.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="80.79999618530273" minHeight="10.0" prefHeight="43.19999389648437" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblName" minWidth="-Infinity" prefHeight="54.0" prefWidth="300.0" text="DogName" textFill="WHITE">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblStats" minWidth="-Infinity" prefHeight="22.0" prefWidth="300.0" text="age, weight" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="btnAchievement" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: null;" text="Achievements" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnOption" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: null;" text="Options" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpgrade" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: null;" text="Upgrades" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane fx:id="gameView" layoutY="151.0" prefHeight="247.0" prefWidth="600.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="151.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.79999999999998" minWidth="10.0" prefWidth="92.6" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.79999999999998" minWidth="10.0" prefWidth="129.00002441406247" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.2" minWidth="10.0" prefWidth="125.60002441406249" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.79997558593755" minWidth="10.0" prefWidth="207.20000000000005" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="239.20000000000002" minHeight="10.0" prefHeight="206.39998779296874" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="122.00000610351566" minHeight="2.000036621093784" prefHeight="33.600012207031256" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="imgMyDoggy" fitHeight="139.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.valignment="BOTTOM" />
+            <ImageView fx:id="imgFriend" fitHeight="149.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.valignment="BOTTOM" />
+            <VBox prefHeight="202.0" prefWidth="75.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btnPlay" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: black;" text="Play" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnFeed" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;" text="Feed" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnSleep" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;" text="Sleep" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnWalk" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;" text="Walk" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnGroom" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: black;" text="Grooming" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.0470588244497776" green="0.03921568766236305" blue="0.4745098054409027" />
+                           </color>
+                        </InnerShadow>
+                     </effect></Button>
+                  <Button fx:id="btnVet" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;" text="Vet" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btnTickle" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;" text="Tickle" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <Label fx:id="lblNeed" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="127.0" text="Bedürfnis" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="btnClose" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: black;" text="Close" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="31.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnFriend" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #154ba1; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;" text="Friend" textFill="WHITE" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <GridPane maxHeight="-Infinity" prefHeight="210.0" prefWidth="106.0" GridPane.columnIndex="4">
+              <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="19.20001220703125" minHeight="8.0" prefHeight="10.399993896484375" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="38.39999999999999" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="34.20001831054688" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.999975585937506" minHeight="0.0" prefHeight="9.799963378906256" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.999975585937506" minHeight="5.800024414062506" prefHeight="22.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ProgressBar fx:id="progressHappy" maxHeight="-Infinity" prefHeight="17.0" progress="0.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets bottom="2.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblHappy" maxHeight="-Infinity" prefHeight="17.0" text="Progress" StackPane.alignment="TOP_CENTER" />
+                     </children>
+                  </StackPane>
+                  <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ProgressBar fx:id="progressLovePoints" maxHeight="-Infinity" prefHeight="17.0" progress="0.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets bottom="2.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblLove" text="Progress" StackPane.alignment="TOP_CENTER" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <ProgressBar fx:id="progressSick" maxHeight="-Infinity" prefHeight="17.0" progress="0.0" StackPane.alignment="BOTTOM_LEFT">
+                           <StackPane.margin>
+                              <Insets bottom="1.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblSick" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="105.0" text="Progress" StackPane.alignment="CENTER" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <ProgressBar fx:id="progressPee" maxHeight="-Infinity" prefHeight="17.0" progress="0.0" StackPane.alignment="BOTTOM_LEFT">
+                           <StackPane.margin>
+                              <Insets bottom="1.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblPee" text="Progress" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <ProgressBar fx:id="progressTiered" maxHeight="-Infinity" prefHeight="17.0" progress="0.0" StackPane.alignment="BOTTOM_LEFT">
+                           <StackPane.margin>
+                              <Insets bottom="1.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblTired" text="Progress" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="74.0" prefWidth="122.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <ProgressBar fx:id="progressShaggy" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="17.0" progress="0.0" StackPane.alignment="BOTTOM_LEFT">
+                           <StackPane.margin>
+                              <Insets bottom="1.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblShaggy" text="Progress" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <ProgressBar fx:id="progressHungry" maxHeight="-Infinity" prefHeight="17.0" progress="0.0">
+                           <StackPane.margin>
+                              <Insets bottom="1.0" right="6.0" />
+                           </StackPane.margin>
+                        </ProgressBar>
+                        <Label fx:id="lblHungry" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="105.0" text="Progress" StackPane.alignment="TOP_CENTER" />
+                     </children>
+                  </StackPane>
+                  <Label alignment="BOTTOM_LEFT" text="Happy: ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="1.0" green="0.9814814925193787" blue="0.9814814925193787" />
+                           </color>
+                        </DropShadow>
+                     </effect></Label>
+                  <Label text="Love: " textFill="#2b2b2b" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text="Hungry: " GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text="Sick: " GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text="Pee: " GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text="Tired: " GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label text="Shaggy: " GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label alignment="TOP_CENTER" text="BMI: " GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <ProgressBar fx:id="progressBMI" maxHeight="-Infinity" prefHeight="17.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets right="6.0" />
+                     </GridPane.margin>
+                  </ProgressBar>
+                  <Label fx:id="lblBMI" text="Progress" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </GridPane>
+      <HBox fx:id="hBox" alignment="CENTER" layoutX="14.0" layoutY="82.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Button fx:id="btnImgUpgrade1" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade1" fitHeight="40.0" fitWidth="40.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/bowl.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade2" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade2" fitHeight="40.0" fitWidth="40.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/collar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade3" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade3" fitHeight="40.0" fitWidth="40.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/dog(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade4" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade4" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade5" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade5" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade6" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade6" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/pet-food(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade7" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade7" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade8" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade8" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/paws.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade9" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade9" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/pawprint(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnImgUpgrade10" mnemonicParsing="false" style="-fx-background-color: null;">
+               <graphic>
+                  <ImageView fx:id="imgUpgrade10" fitHeight="40.0" fitWidth="40.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../icons/transporter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="hAchievement" alignment="CENTER_LEFT" layoutX="317.0" layoutY="358.0" prefHeight="38.0" prefWidth="193.0" spacing="10.0">
+         <children>
+            <ImageView fx:id="imgAchievement" fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/balloon-dog.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblAchievement" prefHeight="36.0" prefWidth="153.0" text="Achievement" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.949999988079071" green="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <padding>
+            <Insets left="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
